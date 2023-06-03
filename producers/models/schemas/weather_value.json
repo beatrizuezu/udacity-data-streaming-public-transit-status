@@ -4,6 +4,6 @@
   "name": "weather.key",
   "fields": [
     { "name": "temperature", "type": "float"},
-    { "name": "status", "type": "long"}
+    { "name": "status", "type": "string"}
   ]
 }
