@@ -24,12 +24,12 @@ CREATE TABLE turnstile (
     line VARCHAR
 ) WITH (
     KAFKA_TOPIC = 'org.chicago.cta.turnstile',
-    VALUE_FORMAT = 'avro',
+    VALUE_FORMAT = 'AVRO',
     KEY = 'station_id'
 );
 
 CREATE TABLE turnstile_summary
-WITH (value_format = 'json') AS
+WITH (value_format = 'JSON') AS
     SELECT station_id, COUNT(station_id) AS count 
     FROM turnstile
     GROUP BY station_id;
